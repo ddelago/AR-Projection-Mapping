@@ -203,7 +203,6 @@ while(cam.isOpened()):
         ProjectImage[ 0-aruco1.shape[0]:height, 0-aruco1.shape[1]:width] = aruco4
 
         cv2.imshow('ProjectImage', ProjectImage)
-        cv2.imshow('ProjectImage2', ProjectImage)
 
     # Reset corner calibration
     if cv2.waitKey(1) == ord('r'):

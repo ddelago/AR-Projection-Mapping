@@ -274,7 +274,7 @@ while cap.isOpened():
 				cv2.circle(img, tuple(c.astype(np.int32)[0]), 3, (255,255,0), cv2.FILLED)
 
 			validCaptures += 1
-			if validCaptures == 120:
+			if validCaptures == 40:
 				break
 
 			cv2.imshow('CircleBoard', img)

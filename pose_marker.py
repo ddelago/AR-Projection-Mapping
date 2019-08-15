@@ -111,7 +111,7 @@ while(cam.isOpened()):
                 except:
                     continue
                 # ProjectImage = drawCube(ProjectImage, corners, imgpts)    
-                ProjectImage = aruco.drawAxis(ProjectImage, projectorMatrix, distCoeffs, rvec, tvec, 1)
+                ProjectImage = aruco.drawAxis(ProjectImage, cameraMatrix, distCoeffs, rvec, tvec, 1)
 
         cv2.imshow('ProjectImage', ProjectImage)
 
