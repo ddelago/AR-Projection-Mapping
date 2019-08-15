@@ -13,15 +13,15 @@ import os
 import pickle
 
 # Check for camera calibration data
-if not os.path.exists('./calibration.pckl'):
+if not os.path.exists('./calibration/ProCamCalibration.pckl'):
     print("You need to calibrate the camera you'll be using. See calibration project directory for details.")
     exit()
 else:
-    f = open('calibration.pckl', 'rb')
+    f = open('./calibration/ProCamCalibration.pckl', 'rb')
     (cameraMatrix, distCoeffs, _, _) = pickle.load(f)
     f.close()
     if cameraMatrix is None or distCoeffs is None:
-        print("Calibration issue. Remove ./calibration.pckl and recalibrate your camera with CalibrateCamera.py.")
+        print("Calibration issue. Remove ./calibration/ProCamCalibration.pckl and recalibrate your camera with CalibrateCamera.py.")
         exit()
 
 # Constant parameters used in Aruco methods

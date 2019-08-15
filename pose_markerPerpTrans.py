@@ -14,15 +14,15 @@ import pickle
 import sys
 
 # Check for camera calibration data
-if not os.path.exists('./calibration/ProCamCalibration3.pckl'):
+if not os.path.exists('./calibration/ProCamCalibration.pckl'):
     print("You need to calibrate the camera you'll be using. See calibration project directory for details.")
     exit()
 else:
-    f = open('./calibration/ProCamCalibration3.pckl', 'rb')
+    f = open('./calibration/ProCamCalibration.pckl', 'rb')
     (_, _, _, _, cameraMatrix, distCoeffs, _) = pickle.load(f)
     f.close()
     if cameraMatrix is None or distCoeffs is None:
-        print("Calibration issue. Remove ./calibration/ProCamCalibration3.pckl and recalibrate your camera with CalibrateCamera.py.")
+        print("Calibration issue. Remove ./calibration/ProCamCalibration.pckl and recalibrate your camera with CalibrateCamera.py.")
         exit()
 
 def onClick(event, x, y, flags, params):
