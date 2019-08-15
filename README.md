@@ -19,12 +19,13 @@ There are three ways to generate calibration markers.
     - Generates a chessboard filled with ArUco markers. This is the ideal method to use when calibrating.
     - `python generate_ChAruco.py`  
 
-### Camera Calibration (No Projector)
+### Calibration
 1. The first calibration method involves using images of a ChArUco board in various positions. 
     - `python calibration_ChAruco.py`
 2. The second calibration method is a **stereo** calibration method that uses a combination of a physical ChArUco board along with a projected circle grid. 
     - See the ChAruco_Circles.webm calibration video to view an example.
     - Based off the calibration method [here](https://www.morethantechnical.com/2017/11/17/projector-camera-calibration-the-easy-way/).
     - This method treats the projector as the second camera in a stereo camera pair in order to get the transformation from the actual camera to the projectors perspective.
+    - Needs a circle grid as well as a ChArUco board. To generate, use the `~/patterns/gen_pattern.py` file. Instructions on how to use the program can be seen [here](https://docs.opencv.org/master/da/d0d/tutorial_camera_calibration_pattern.html). An already generated board can be found here: `~/patterns/test_circleGrid`
     - `python calibration_ChArucoWithCircles.py`
 
