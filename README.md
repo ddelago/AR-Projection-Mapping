@@ -33,6 +33,8 @@ In orer to track objects correctly, you need to use a calibration using the came
     - `python calibration_ChArucoWithCircles.py`
 
 ### Marker Tracking
+![alt text](https://github.com/ddelago/AR-Projection-Mapping/blob/master/pictures/perspTrans.PNG)
+
 After calibration, the tracking of each marker can now be performed.
 1. **Tracking Using Stereo Calibration**
     - **_This method is not fully implemented_**
