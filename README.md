@@ -21,6 +21,7 @@ There are three ways to generate calibration markers.
 
 ### Calibration
 ![alt text](https://github.com/ddelago/AR-Projection-Mapping/blob/master/pictures/stereoCalib.PNG)
+
 In orer to track objects correctly, you need to use a calibration using the camera that you will use! The calibration files in this repository were created using a Logitech C920 camera.
 1. The first calibration method involves using images of a ChArUco board in various positions. The images are located in the `~/pictures` folder.
     - `python calibration_ChAruco.py`
