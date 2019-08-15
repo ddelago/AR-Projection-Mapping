@@ -20,9 +20,8 @@ There are three ways to generate calibration markers.
     - `python generate_ChAruco.py`  
 
 ### Calibration
-![alt text](https://github.com/ddelago/AR-Projection-Mapping/blob/master/pictures/stereoCalib.PNG)
-
 In orer to track objects correctly, you need to use a calibration using the camera that you will use! The calibration files in this repository were created using a Logitech C920 camera.
+![alt text](https://github.com/ddelago/AR-Projection-Mapping/blob/master/pictures/stereoCalib.PNG)
 1. The first calibration method involves using images of a ChArUco board in various positions. The images are located in the `~/pictures` folder.
     - `python calibration_ChAruco.py`
 2. The second calibration method is a **stereo** calibration method that uses a combination of a physical ChArUco board along with a projected circle grid. 
